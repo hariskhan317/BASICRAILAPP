@@ -27,4 +27,12 @@ class HomeController < ApplicationController
 
     render html: message.html_safe
   end
+
+  def passingVar
+    @message = "<h1>Hey Haris</h1>"
+  end
+
+  def passingTime
+    @currentTime = DateTime.now
+  end
 end

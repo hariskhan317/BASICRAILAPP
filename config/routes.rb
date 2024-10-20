@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get "home/index" => "home#index"
 
   get "home/getQueryStringParams" => "home#getQueryStringParams"
+  get "home/passingVar" => "home#passingVar"
+
+  get "home/passingTime" => "home/passingTime"
 end
