@@ -10,4 +10,21 @@ class HomeController < ApplicationController
     message+= "<h6> Render html h6</h6>"
     render html: message.html_safe
   end
+  
+  def getQueryStringParams
+    message = ''
+    if params[:name]
+      message += "<h1>Hi my name is " + params[:name] + " </h1>"
+    else
+      message += "<h1> Couldn't find the name</h1>"
+    end
+
+    if params[:country]
+      message += "<h1> I am from " + params[:country] + "</h1>"
+    else
+      message += "<h1> Couldn't find the name</h1>"
+    end
+
+    render html: message.html_safe
+  end
 end
